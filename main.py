@@ -36,7 +36,7 @@ async def on_message(message):
 @koala.event
 async def on_ready():
   try:
-    voice_channel = koala.get_channel(channelID)
+    voice_channel = await koala.get_channel(channelID)
     os.system('cls' if os.name == 'nt' else 'clear')
     print(f"{green}[+]{white} Logged in as {koala.user}")
     await voice_channel.connect()

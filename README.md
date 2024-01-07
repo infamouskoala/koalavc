@@ -7,3 +7,8 @@
 
 # PULL REQUESTS
 - Think you can change my code for the better? You're most welcome to do so ⊂(・u・⊂)
+
+# PREVIEW
+![image](img/1.png)
+![image](img/2.png)
+![image](img/3.png)

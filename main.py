@@ -19,7 +19,7 @@ $$$ Win last to leave like nothing $$${white}
 """)
 pth = 'src\\stolen.txt'
 file = open(pth,"w")
-file.write("If this software was sold to you, I am sad to tell you that you have been robbed :( this is free on my github. Welp here are my socials and I am the real developer of this.\nhttps://youtube.com/infamouskoala\nhttps://github.com/infamous-koala")
+file.write("If this software was sold to you, I am sad to tell you that you have been robbed :( this is free on my github. Welp here are my socials and I am the real developer of this.\nhttps://youtube.com/infamouskoala\nhttps://github.com/infamouskoala")
 file.close()
 token = input("Enter User token: ")
 channelID = int(input("Enter voice channel ID: "))

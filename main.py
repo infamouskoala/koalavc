@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 os.system("pip install pynacl")
-from src.keep_alive.keep_alive import keep_alive
     
 green = "\033[1;32m"
 white = "\033[1;37m"

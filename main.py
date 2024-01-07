@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+os.system("pip install pynacl")
 from src.keep_alive.keep_alive import keep_alive
     
 green = "\033[1;32m"
@@ -35,14 +36,17 @@ async def on_message(message):
 
 @koala.event
 async def on_ready():
-  try:
-    voice_channel = await koala.get_channel(channelID)
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print(f"{green}[+]{white} Logged in as {koala.user}")
-    await voice_channel.connect()
-    print(f"{green}[+]{white} Joined the voice channel")
-  except:
-    print(f"{yellow}[!]{white} Invalid ID")
+    try:
+        voice_channel = koala.get_channel(channelID)
+        if voice_channel:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print(f"{green}[+]{white} Logged in as {koala.user}")
+            await voice_channel.connect()
+            print(f"{green}[+]{white} Joined the voice channel")
+        else:
+            print(f"{yellow}[!]{white} Voice channel not found")
+    except Exception as e:
+        print(f"{yellow}[!]{white} Error: {e}")
 
 try:
   koala.run(token, bot=False)
